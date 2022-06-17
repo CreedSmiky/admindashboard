@@ -1,0 +1,144 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    position: absolute;
+    height: 50px;
+    width: 100%;
+    background-color: #ff4500;
+    z-index: 6;
+}
+
+.side-bar{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #06BCFB;
+    z-index: 5;
+    padding-top: 50px;
+}
+
+.main-content{
+    padding-top: 50px;
+    padding-left: 50%;
+    background-attachment: fixed;
+}
+.side-bar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-bar ul li{
+    padding: 20px 10px;
+}
+
+.side-bar ul li a{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* small devices (landscape phones ,576px and up */
+
+@media screen and (min-width:576px) {
+
+    .side-bar{
+        width: 150px;
+    }
+
+    .side-bar ul li{
+        text-align: center;
+    }
+    .side-bar ul li span:nth-child(2){
+        display: none;
+    }
+    .side-bar ul li i{
+        font-size: 30px;
+    }
+    .main-content{
+        margin-left: 50px;
+    }
+}
+/* Extra small devices(potrait phones) */
+
+@media (max-width:575.98px){
+    .side-bar{
+        width:90px;
+    }
+
+    .side-bar ul li span:nth-child(2){
+        display: none;
+    }
+
+    .side-bar ul li{
+        text-align: left;
+    }
+
+    .side-bar ul li i{
+        font-size: 20px;
+    }
+}
+
+/* Tablet mode  */
+
+@media (min-width:768px) {
+    .side-bar{
+        width: 100px;
+    }
+
+    .side-bar ul li span:nth-child(2){
+        display: none;
+    }
+
+    .side-bar ul li{
+        text-align: center;
+    }
+
+    .side-bar ul li i{
+        font-size: 30px;
+    }
+}
+
+/* Large devices */
+@media (min-width:992px) {
+    .side-bar{
+        width:200px;
+    }
+
+    .side-bar ul li{
+        text-align: left;
+    }
+
+    .side-bar ul li span:nth-child(2){
+        display: inline;
+    }
+
+    .side-bar ul li i{
+        font-size: 20px;
+    }
+}
+
+/* Extra large devices */
+@media (min-width:1200px) {
+    .side-bar{
+        width: 200px;
+    }
+
+    .side-bar ul li{
+        text-align: left;
+    }
+
+    .side-bar ul li span:nth-child(2){
+        display: inline;
+    }
+
+    .side-bar ul li i{
+        font-size: 20px;
+    }
+}
