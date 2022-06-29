@@ -1,3 +1,9 @@
+<?php 
+
+$msg='';
+
+require_once('processRegister.php') ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,21 +18,21 @@
     <div class="register-header">Zalego| Admin Register</div>
 
     <div class="logo"><img src="images/zalego.jfif" alt="logo"></div>
-
+    <span><?php echo $msg ?></span>
     <div class="container . shadow">
 
-        <form>
+        <form action="register.php" method="POST">
             <label for="username" class="form-label">Username</label>
-            <input type="text" class="form-control" id="username">
+            <input type="text" class="form-control" id="username" name="username">
 
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email">
+            <input type="email" class="form-control" id="email" name="email">
 
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password">
+            <input type="password" class="form-control" id="password" name="password">
 
             <label for="confirm" class="form-label">Confirm Password</label>
-            <input type="password" class="form-control" id="confirm">
+            <input type="password" class="form-control" id="confirm" name="confirm">
 
             <button type="submit" name="submit" class="btn btn-primary mt-3">Submit</button>
 
