@@ -1,3 +1,9 @@
+<?php
+
+    session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +25,7 @@
         <nav>
             <ul>
                 <li>
-                    <a href="">
+                    <a href="students.html">
                         <span><i class="fa fa-group"></i></span>
                         <span>Students</span>
                     </a>
@@ -78,7 +84,7 @@
                         <span class="float-right">00</span>   
                     </div>
                     <div class="card-footer"></div>
-                 </div>
+                </div>
                 
                 <div class="col-lg-3">
                     <div class="card-header bg-dark text-white text-center">

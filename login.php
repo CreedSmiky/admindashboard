@@ -1,3 +1,45 @@
+<?php
+
+session_start();
+
+// database connection
+
+require_once('connection.php');
+
+if (isset($_POST['login']))
+{
+
+    $username =$_POST['username'];
+    $password=$_POST['password'];
+    $newPass= md5($password);
+
+
+    $sql = mysqli_query($dBconn, "SELECT * FROM account WHERE username= '$username' and password ='$newPass'");
+    $fetch= mysqli_fetch_array($sql);
+
+    if ($fetch > 0)
+
+    {
+        $_SESSION['login'] = $username;
+
+       header('location: index.php'); 
+    }
+    else{
+        echo "error";
+    }
+}
+
+
+
+
+
+?>
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,14 +58,14 @@
 
     <div class="container shadow">
 
-        <form>
+        <form action="login.php" method="POST">
             <label for="Username" class="form-label">Username:</label>
-            <input type="text" class="form-control" id="username">
+            <input type="text" class="form-control" id="username" name="username">
 
             <label for="Password" class="form-label">Password:</label>
-            <input type="password" class="form-control" id="Password">
+            <input type="password" class="form-control" id="Password" name="password">
 
-            <button type="submit" class="btn btn-primary mt-3" name="submit">Submit</button>
+            <button type="submit" class="btn btn-primary mt-3" name="login">Submit</button>
             
             <p class="mt-3">Have no account? Sign up <a href="#" style="text-decoration:none ;">Here</a></p>
 
