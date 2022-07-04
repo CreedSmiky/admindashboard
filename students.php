@@ -1,3 +1,18 @@
+<?php 
+$server="localhost";
+$username="root";
+$password= "";
+$database="zalego";
+
+$dBconn=mysqli_connect($server, $username, $password, $database);
+
+$sql = mysqli_query($dBconn, "SELECT * FROM enrollment");
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -74,14 +89,15 @@
                                 </tr>
                             </thead>
                             <tbody>
+                               <?php while($fetchEnrollmentRecord= mysqli_fetch_array($sql)){?>
                                 <tr>
-                                    <td>1</td>
-                                    <td>Chris Mutugi</td>
-                                    <td>+254112671957</td>
-                                    <td>mwitichris@gmail.com</td>
-                                    <td>Software development</td>
-                                    <td>Male</td>
-                                    <td> 9th May 2022</td>
+                                    <td><?php echo $fetchEnrollmentRecord ['no'];?></td>
+                                    <td><?php echo $fetchEnrollmentRecord ['fullname'];?></td>
+                                    <td><?php echo $fetchEnrollmentRecord ['phonenumber'];?></td>
+                                    <td><?php echo $fetchEnrollmentRecord ['email'];?></td>
+                                    <td><?php echo $fetchEnrollmentRecord ['course'];?></td>
+                                    <td><?php echo $fetchEnrollmentRecord ['gender'];?></td>
+                                    <td><?php echo $fetchEnrollmentRecord ['created_at'];?></td>
                                     <td>
                                         <a class="btn btn-primary btn-sm" href="#"><i class="fa fa-edit"></i></a>
                                         <a class="btn btn-info btn-sm" href="#"><i class="fa fa-eye"></i></a>
@@ -90,38 +106,7 @@
                                     
                                     </td>
                                 </tr>
-
-                                <tr>
-                                    <td>2</td>
-                                    <td>Chris Mutugi</td>
-                                    <td>+254112671957</td>
-                                    <td>mwitichris@gmail.com</td>
-                                    <td>Software development</td>
-                                    <td>Male</td>
-                                    <td> 9th May 2022</td>
-                                    <td>
-                                        <a class="btn btn-primary btn-sm" href="#"><i class="fa fa-edit"></i></a>
-                                        <a class="btn btn-info btn-sm" href="#"><i class="fa fa-eye"></i></a>
-                                        <a class="btn btn-danger btn-sm" href="#"><i class="fa fa-trash"></i></a>
-                                    
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>3</td>
-                                    <td>Chris Mutugi</td>
-                                    <td>+254112671957</td>
-                                    <td>mwitichris@gmail.com</td>
-                                    <td>Software development</td>
-                                    <td>Male</td>
-                                    <td> 9th May 2022</td>
-                                    <td>
-                                        <a class="btn btn-primary btn-sm" href="#"><i class="fa fa-edit"></i></a>
-                                        <a class="btn btn-info btn-sm" href="#"><i class="fa fa-eye"></i></a>
-                                        <a class="btn btn-danger btn-sm" href="#"><i class="fa fa-trash"></i></a>
-                                    
-                                    </td>
-                                </tr>
+                                <?php } ?>
                             </tbody>
                         </table>
                     </div>
