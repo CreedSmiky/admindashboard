@@ -1,10 +1,5 @@
-<?php 
-$server="localhost";
-$username="root";
-$password= "";
-$database="zalego";
-
-$dBconn=mysqli_connect($server, $username, $password, $database);
+<?php
+require_once ('logics/dbConnection.php');
 
 $sql = mysqli_query($dBconn, "SELECT * FROM enrollment");
 
@@ -25,39 +20,10 @@ $sql = mysqli_query($dBconn, "SELECT * FROM enrollment");
     <title>Students</title>
 </head>
 <body>
-    <div class="header">
-        <img src="images/zalego.jfif" alt="image" class="image">
-        <a href="#" class="navbar-trigger"><span></span></a>
-
-    </div>
+    <?php  require_once ('includes/navbar.php') ?>
 
     <div class="side-bar">
-        <nav>
-            <ul>
-                <li>
-                    <a href="">
-                        <span><i class="fa fa-group"></i></span>
-                        <span>Students</span>
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="">
-                        <span><i class="fa fa-folder-open"></i></span>
-                        <span>Courses</span>
-                    </a>
-                </li>
-                
-                <li>
-                    <a href="">
-                        <span><i class="fa fa-graduation-cap"></i></span>
-                        <span>Campus</span>
-                    </a>
-                </li>
-                
-            </ul>
-
-        </nav>
+    <?php require_once ('includes/sidebar.php') ?>
 
     </div>
 

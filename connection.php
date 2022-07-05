@@ -2,7 +2,7 @@
 $server="localhost";
 $username="root";
 $password="";
-$database="dashboard";
+$database="zalego";
 
 // connections
 
