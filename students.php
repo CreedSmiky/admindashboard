@@ -65,7 +65,7 @@ $sql = mysqli_query($dBconn, "SELECT * FROM enrollment");
                                     <td><?php echo $fetchEnrollmentRecord ['gender'];?></td>
                                     <td><?php echo $fetchEnrollmentRecord ['created_at'];?></td>
                                     <td>
-                                        <a class="btn btn-primary btn-sm" href="#"><i class="fa fa-edit"></i></a>
+                                        <a class="btn btn-primary btn-sm" href="edit-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no'] ?>"><i class="fa fa-edit"></i></a>
                                         <a class="btn btn-info btn-sm" href="#"><i class="fa fa-eye"></i></a>
                                         <a class="btn btn-danger btn-sm" href="#"><i class="fa fa-trash"></i></a>
                                     
@@ -84,6 +84,6 @@ $sql = mysqli_query($dBconn, "SELECT * FROM enrollment");
     </div>
             
 
-
+    <?php require_once ('includes/scripts.php') ?>
 </body>
 </html>
