@@ -18,6 +18,32 @@
         $course= $fetchStudent['course'];
 
     }
+
+    //updating user records
+
+    if (isset($_POST['updateEnrollment']))
+        {
+            //fetch form data
+
+            $fullname =$_POST['fullname'];
+            $phonenumber= $_POST['phone'];
+            $email= $_POST['email'];
+            $gender= $_POST['gender'];
+            $course= $_POST['course'];
+
+            $upadateRecords= mysqli_query($dBconn, "UPDATE enrollment set fullname= '$fullname', phonenumber ='$phonenumber', email='$email', gender= '$gender', course='$course' WHERE no='".$_GET['id']."'");
+
+            if ($upadateRecords)
+            {
+                echo "Records updated successfully";
+            }
+
+            else{
+                echo "Errpr occured while updating user";
+            }
+        }
+
+        
 ?>
 
 
@@ -67,12 +93,6 @@
                                 </div>
                                 <br>
                                 <div class="row">
-                                    <div class="col-lg-12">
-                                    <p>In order to complete your information to the bootcamp, you are required to select one course you will be<br>undertaking. Please NOTE that this will be your learning track during the 2-weeks immersion.</p>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
                                     <div class="col-lg-6">
                                         <label for="course" class="form-label"><b>What is your preffered course ?</b></label>
                                         <select class="form-select" aria-label="Default select example" name="course">
@@ -84,21 +104,7 @@
                             
                                 </div>
                                 <br>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <p>You agrre by providing your information you understand all our data privacy an protection policy<br>outlined in our Terms$ condition and the Privacy Policy statements.</p>
-                                    </div>
-                                </div>
-                                <br>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <input type="checkbox" id="checkbox">
-                                        <label for="checkbox"><b>Agree terms and condition</b></label>
-                                        
-                                    </div>
-                                </div>
-                                <br>
-                                <button type="submit" name="Submitbutton" class="btn btn-primary mb-3">submit application</button> 
+                                <button type="submit" name="updateEnrollment" class="btn btn-primary mb-3">Update Records</button> 
                             </form> 
                             
                             
