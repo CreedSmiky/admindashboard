@@ -1,5 +1,5 @@
 <?php
-
+    $message='';
     session_start();
 
     require_once ('includes/headers.php');
@@ -11,6 +11,7 @@
     while ($fetchStudent= mysqli_fetch_array($querystudent))
 
     {
+        $id=$fetchStudent['no'];
         $fullname=$fetchStudent['fullname'];
         $phonenumber=$fetchStudent['phonenumber'];
         $email=$fetchStudent['email'];
@@ -19,29 +20,9 @@
 
     }
 
-    //updating user records
+    require_once('logics/processUpdate.php');
 
-    if (isset($_POST['updateEnrollment']))
-        {
-            //fetch form data
-
-            $fullname =$_POST['fullname'];
-            $phonenumber= $_POST['phone'];
-            $email= $_POST['email'];
-            $gender= $_POST['gender'];
-            $course= $_POST['course'];
-
-            $upadateRecords= mysqli_query($dBconn, "UPDATE enrollment set fullname= '$fullname', phonenumber ='$phonenumber', email='$email', gender= '$gender', course='$course' WHERE no='".$_GET['id']."'");
-
-            if ($upadateRecords)
-            {
-                echo "Records updated successfully";
-            }
-
-            else{
-                echo "Errpr occured while updating user";
-            }
-        }
+    
 
         
 ?>
@@ -63,9 +44,10 @@
                     <div class="card">
                             <div class="card-header bg-dark text-white text-center">
                                 <h4>Edit  <?php echo $fullname ?></h4>
+                                <?php echo $message ?>
                             </div>
                         <div class="card-body">
-                            <form action="edit-enrollment.php" method="POST">
+                            <form action="edit-enrollment.php?id=<?php echo $id ?>" method="POST">
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <label for="full name" class="form-label"><b>Full Name:</b></label>

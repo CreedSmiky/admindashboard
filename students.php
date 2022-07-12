@@ -41,7 +41,7 @@ $sql = mysqli_query($dBconn, "SELECT * FROM enrollment");
             <div class="row">
                 <div class="col-lg-12">
                     <div class="card-body">
-                        <table class="table table-striped table-hover table-responsive">
+                        <table class="table table-striped table-hover table-responsive" style="font-size:12px;">
                             <thead>
                                 <tr>
                                     <th scope="col">ID</th>
