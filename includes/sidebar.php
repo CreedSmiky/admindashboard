@@ -5,7 +5,7 @@
                 <li>
                     <a href="index.php">
                         <span><i class="fa fa-home"></i></span>
-                        <span>Students</span>
+                        <span>Home</span>
                     </a>
                 </li>
 

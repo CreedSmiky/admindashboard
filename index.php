@@ -70,9 +70,9 @@
                         <span class="float-end">00</span>
                     </div>
                     <div class="card-footer"></div>
-                 </div>
+                </div>
 
-                 <div class="col-lg-3">
+                <div class="col-lg-3">
                     <div class="card-header bg-dark text-white text-center">
                          <span>Top content</span>
                     </div>
@@ -81,14 +81,14 @@
                         <span class="float-end badge bg-dark rounded-pill"><?php echo $countAllStudents?></span>
                     </div>
                     <div class="card-footer"></div>
-                 </div>
+                </div>
                  
 
-                 <div class="col-lg-12">
+                <div class="col-lg-12">
                     <div class="card-header bg-dark text-white text-center">
                         <span>Students Analysis</span>
                     </div>
-                 </div>
+                </div>
             </div>
         </div>
     </div>
