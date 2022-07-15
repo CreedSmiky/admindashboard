@@ -29,55 +29,57 @@ $sql = mysqli_query($dBconn, "SELECT * FROM enrollment");
 
     <div class="main-content">
         <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="card-header bg-dark text-white text-center">
-                        <span>Students Table</span>
+           <div class="card">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-header bg-dark text-white text-center">
+                            <span>Students Table</span>
+                        </div>
+                    
                     </div>
-                   
                 </div>
-            </div>
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="card-body">
-                        <table class="table table-striped table-hover table-responsive" style="font-size:12px;">
-                            <thead>
-                                <tr>
-                                    <th scope="col">ID</th>
-                                    <th scope="col">FULLNAME</th>
-                                    <th scope="col">PHONE</th>
-                                    <th scope="col">EMAIL</th>
-                                    <th scope="col">COURSE</th>
-                                    <th scope="col">GENDER</th>
-                                    <th scope="col"> ENROLLED ON</th>
-                                    <th scope="col">ACTION </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                               <?php while($fetchEnrollmentRecord= mysqli_fetch_array($sql)){?>
-                                <tr>
-                                    <td><?php echo $fetchEnrollmentRecord ['no'];?></td>
-                                    <td><?php echo $fetchEnrollmentRecord ['fullname'];?></td>
-                                    <td><?php echo $fetchEnrollmentRecord ['phonenumber'];?></td>
-                                    <td><?php echo $fetchEnrollmentRecord ['email'];?></td>
-                                    <td><?php echo $fetchEnrollmentRecord ['course'];?></td>
-                                    <td><?php echo $fetchEnrollmentRecord ['gender'];?></td>
-                                    <td><?php echo $fetchEnrollmentRecord ['created_at'];?></td>
-                                    <td>
-                                        <a class="btn btn-primary btn-sm" href="edit-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no'] ?>"><i class="fa fa-edit"></i></a>
-                                        <a class="btn btn-info btn-sm" href="view-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no']?>"><i class="fa fa-eye"></i></a>
-                                        <a class="btn btn-danger btn-sm" href="delete-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no']?>"><i class="fa fa-trash"></i></a>
-                                    
-                                    
-                                    </td>
-                                </tr>
-                                <?php } ?>
-                            </tbody>
-                        </table>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="card-body">
+                            <table class="table table-striped table-hover table-responsive" style="font-size:12px;">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">ID</th>
+                                        <th scope="col">FULLNAME</th>
+                                        <th scope="col">PHONE</th>
+                                        <th scope="col">EMAIL</th>
+                                        <th scope="col">COURSE</th>
+                                        <th scope="col">GENDER</th>
+                                        <th scope="col"> ENROLLED ON</th>
+                                        <th scope="col">ACTION </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <?php while($fetchEnrollmentRecord= mysqli_fetch_array($sql)){?>
+                                    <tr>
+                                        <td><?php echo $fetchEnrollmentRecord ['no'];?></td>
+                                        <td><?php echo $fetchEnrollmentRecord ['fullname'];?></td>
+                                        <td><?php echo $fetchEnrollmentRecord ['phonenumber'];?></td>
+                                        <td><?php echo $fetchEnrollmentRecord ['email'];?></td>
+                                        <td><?php echo $fetchEnrollmentRecord ['course'];?></td>
+                                        <td><?php echo $fetchEnrollmentRecord ['gender'];?></td>
+                                        <td><?php echo $fetchEnrollmentRecord ['created_at'];?></td>
+                                        <td>
+                                            <a class="btn btn-primary btn-sm" href="edit-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no'] ?>"><i class="fa fa-edit"></i></a>
+                                            <a class="btn btn-info btn-sm" href="view-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no']?>"><i class="fa fa-eye"></i></a>
+                                            <a class="btn btn-danger btn-sm" href="delete-enrollment.php?id=<?php echo $fetchEnrollmentRecord['no']?>"><i class="fa fa-trash"></i></a>
+                                        
+                                        
+                                        </td>
+                                    </tr>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
-            </div>
+           </div>
         </div>
 
         
