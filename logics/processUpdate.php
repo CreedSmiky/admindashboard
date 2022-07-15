@@ -16,6 +16,7 @@ if (isset($_POST['updateEnrollment']))
             if ($upadateRecords)
             {
                 $message= "Records updated successfully";
+               
             }
 
             else{

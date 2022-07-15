@@ -52,7 +52,7 @@
 
                 <div class="col-lg-3">
                     <div class="card-header bg-dark text-white text-center">
-                         <span>Top content</span>
+                         <span>Courses</span>
                     </div>
                     <div class="card-body">
                         <span><i class="fa fa-folder-open fa-3x"></i></span>
@@ -63,7 +63,7 @@
                 
                 <div class="col-lg-3">
                     <div class="card-header bg-dark text-white text-center">
-                         <span>Top content</span>
+                         <span>Campus</span>
                     </div>
                     <div class="card-body">
                         <span><i class="fa fa-graduation-cap fa-3x"></i></span>

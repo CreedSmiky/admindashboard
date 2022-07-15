@@ -45,6 +45,7 @@
                             <div class="card-header bg-dark text-white text-center">
                                 <h4>Edit  <?php echo $fullname ?></h4>
                                 <?php echo $message ?>
+                                <a href="students.php" class= "float-start btn btn-outline-primary btn-sm"><i class= "fa fa-arrow-left"></i> Back</a> 
                             </div>
                         <div class="card-body">
                             <form action="edit-enrollment.php?id=<?php echo $id ?>" method="POST">
