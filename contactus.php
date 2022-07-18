@@ -63,7 +63,10 @@ $contactus = mysqli_query ($dBconn, "SELECT * FROM contactus");
                                     <td><?php echo $fetchmessage ['created_at'];?></td>
 
                                     <td>
+                                    <a class="btn btn-primary btn-sm" href="edit-messages.php?id=<?php echo $fetchmessage['number'] ?>"><i class="fa fa-edit"></i></a>
                                     <a class="btn btn-danger btn-sm" href="delete-message.php?id=<?php echo $fetchmessage['number']?>"><i class="fa fa-trash"></i></a>
+                                    <a class="btn btn-info btn-sm" href="view-messages.php?id=<?php echo $fetchmessage['number']?>"><i class="fa fa-eye"></i></a>
+                                    
                                     
                                     </td>
                                    
