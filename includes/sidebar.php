@@ -1,7 +1,5 @@
 <nav>
             <ul>
-
-
                 <li>
                     <a href="index.php">
                         <span><i class="fa fa-home"></i></span>
@@ -36,6 +34,13 @@
                         <span>Messages</span>
                     </a>
                 </li>
+
+                <li>
+                    <a href="subscribe.php">
+                        <span><i class="fa fa-inbox-in"></i></span>
+                        <span>Subscribe Us</span>
+                    </a>
+               </li>
                 
 
                

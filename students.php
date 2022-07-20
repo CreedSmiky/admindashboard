@@ -33,7 +33,9 @@ $sql = mysqli_query($dBconn, "SELECT * FROM enrollment");
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-header bg-dark text-white text-center">
+                            
                             <span>Students Table</span>
+                            <a href="add-student.php" class="btn btn-primary btn-sm float-end"><i class="fa fa-plus"></i></a>
                         </div>
                     
                     </div>
@@ -73,7 +75,7 @@ $sql = mysqli_query($dBconn, "SELECT * FROM enrollment");
                                         
                                         </td>
                                     </tr>
-                                    <?php } ?>
+                                <?php } ?>
                                 </tbody>
                             </table>
                         </div>
